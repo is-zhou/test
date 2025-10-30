@@ -1,20 +1,20 @@
-name: Deploy VitePress site
+name: Deploy VitePress site to GitHub Pages
 
 on:
   push:
-    branches: [main]
-
-permissions:
-  contents: write # ✅ 必须有，否则无法推送到 gh-pages
+    branches: [main] # 你默认分支是 main 就写 main，如果是 master 就改成 master
+  workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
@@ -22,7 +22,8 @@ jobs:
       - name: Build VitePress site
         run: npm run docs:build
 
-      - uses: peaceiris/actions-gh-pages@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .vitepress/dist
