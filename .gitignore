@@ -41,3 +41,4 @@ Desktop.ini
 # Others
 temp/
 .vitepress/cache
+.vitepress/dist
