@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /总结/函数式弹窗
+      link: /summarize/函数式弹窗
     # - theme: alt
     #   text: API Examples
     #   link: /api-examples
