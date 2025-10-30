@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,af as h}from"./chunks/framework.W5ZyBR1w.js";const o=JSON.parse('{"title":"函数式弹窗","description":"","frontmatter":{},"headers":[],"relativePath":"总结/函数式弹窗.md","filePath":"总结/函数式弹窗.md"}'),k={name:"总结/函数式弹窗.md"};function p(l,s,t,e,d,E){return n(),a("div",null,[...s[0]||(s[0]=[h("",47)])])}const g=i(k,[["render",p]]);export{o as __pageData,g as default};
